@@ -16,7 +16,7 @@ data$newdate<-strptime(a,  "%d/%m/%Y %H:%M:%S")
 
 # Figure 3
 png("plot3.png",width=480,height=480)
-plot(data$newdate,data$sub_metering_1+data$sub_metering_2+data$sub_metering_3,type="n",
+plot(data$newdate,data$sub_metering_1,type="n",
      ylab="Energy sub metering",xlab="")
 lines(data$newdate,data$sub_metering_1)
 lines(data$newdate,data$sub_metering_2,col="red")

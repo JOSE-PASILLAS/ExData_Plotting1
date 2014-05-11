@@ -23,10 +23,10 @@ plot(data$newdate,data$global_active_power,xlab="",
      ylab="Global Active Power (kilowatts)",
      type="l")
 #Figure 4.2
-plot(data$newdate,data$voltage,xlab="",
+plot(data$newdate,data$voltage,xlab="datetime",
      ylab="Voltage",type="l")
 #Figure 4.3
-plot(data$newdate,data$sub_metering_1+data$sub_metering_2+data$sub_metering_3,type="n",
+plot(data$newdate,data$sub_metering_1,type="n",
      ylab="Energy sub metering",xlab="")
 lines(data$newdate,data$sub_metering_1)
 lines(data$newdate,data$sub_metering_2,col="red")
@@ -34,6 +34,6 @@ lines(data$newdate,data$sub_metering_3,col="blue")
 legend("topright",col=c("black","red","blue"),lty=1,
        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 #Figure 4.4
-plot(data$newdate,data$global_reactive_power,xlab="",
+plot(data$newdate,data$global_reactive_power,xlab="datetime",
      ylab="global_reactive_power",type="l")
 dev.off()
